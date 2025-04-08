@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin</title>
+    <link rel="stylesheet" href="./form.css">
+</head>
+<style>
+    .form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border: 1px solid black;
+    width: 350px;
+    margin: auto;
+    padding: 15px;
+    body {
+    background-color: rgba(1, 1, 7, 0.874); /* Semi-transparent blue */
+}
+}
+.p2{
+    display: flex;
+    flex-direction: column;
+}
+.submit input{
+    border: 1px solid black
+}
+.submit{
+    display: flex;
+    flex-direction: column;
+}
+.p2 div{
+    display: flex;
+    flex-direction: column;
+}
+.submit button{
+    background-color: rgb(111, 63, 234);
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+}
+
+.p2 input{
+    height: 30px;
+}
+
+.parent{
+    display: flex;
+    justify-content: center;
+    border: 2px solid burlywood;
+    width: 800px;
+    height: 500px;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+.logo{
+    background-color: rgba(172, 167, 167, 0.505);
+    width: 50%;
+    height: 96%;
+    text-align: center;
+    align-content: center;
+    margin-left: 10px;
+    max-height: 100%;
+    margin-right: 10px;
+}
+
+.checkbox{
+    margin-top: 10px;
+    display: flex;
+}
+.rem_text{
+position: absolute;
+
+}
+body{
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;height: 100vh;
+}
+.submit p{
+    margin-top: 0px;
+}
+.rem_me{
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+.textbox{
+    border-radius: 10px;
+}
+span{
+    color:  rgb(111, 63, 234);
+    cursor: pointer;
+}
+.textbox::placeholder {
+    padding-left: 10px; 
+    padding-right: 10px; 
+}
+.wave {
+    display: inline-block;
+    animation: wave 1.2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(0); 
+    }
+    75% {
+        transform: translateY(5px); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+
+.wave:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.wave:nth-child(2) {
+    animation-delay: 0.2s; 
+}
+
+.wave:nth-child(3) {
+    animation-delay: 0.4s; 
+}
+
+.logo label{
+    font-size: 20px;
+}
+.logo p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5;
+    overflow: hidden; 
+    height: 1.5em;
+    position: relative;
+    padding-left: 30px;
+}
+
+.role-text {
+    display: block;
+    opacity: 0;
+    animation: slideUpDown 5s infinite; 
+}
+
+@keyframes slideUpDown {
+    0%, 100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    10%, 40% {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+    50%, 90% {
+        transform: translateY(-100%); 
+        opacity: 0;
+    }
+}
+
+#bg-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background: url('background.svg') no-repeat center center;
+    background-size: cover; 
+    opacity: 1;
+}
+</style>
+<body>
+
+    <div id="bg-wrap">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+        <defs>
+        <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop><stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5"><animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5"><animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient>
+        </defs>
+        
+        <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect>
+        <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+        </rect>
+        <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+        </rect>
+        </svg>
+    </div>
+    
+<div class="parent"> 
+
+
+    <div class="form" id="formValidation">
+
+        <div class="p1">
+            <label><h1>
+                <span class="wave">Welcome</span>
+                <span class="wave">to</span>
+                <span class="wave">RoleFlex</span>
+            </h1></label>
+            <p> Please <span>SignIn </span> to Continue </p>
+        </div>
+
+        <div class="p2">
+            
+            <div>
+                <label> <h5> Email </h5> </label>
+                <input type="text4" id="userName" class="textbox" placeholder="Insert your email">
+                
+            </div>
+
+            <div>
+            <label> <h5> Password </h5> </label>
+                <input type="password" id="passWord" class="textbox"  placeholder="Insert your password">
+            </div>
+
+            <div class="checkbox">
+                <form>
+                <input type="checkbox" id="rememberme" class="rem_me">
+                <label for="rememberme" class="rem_text" > Remember me </label>
+            </form>
+            </div>
+
+            <div class="submit">
+                <p id="text"> </p>
+                <button onclick="signin()" type="Sign In" > Sign In </button>
+            </div>
+
+            <div>
+                <p>Don't have an Account? <span onclick="t2()"> Sign up </span></p>
+            </div>
+
+        </div>
+
+    </div> 
+
+    <div class="logo">
+        <label for="">A MultiRole Generative AI : </label>
+        <p class="roles">
+            <span class="role-text">Doctor</span>
+            <span class="role-text">Chef</span>
+            <span class="role-text">Teacher</span>
+            <span class="role-text">Driver</span>
+        </p>
+    </div>
+
+</div>
+
+
+<script>
+
+const roles = document.querySelectorAll('.role-text');
+let currentRole = 0;
+
+function cycleRoles() {
+    roles.forEach(role => role.style.display = 'none');
+    
+    roles[currentRole].style.display = 'inline';
+
+    currentRole = (currentRole + 1) % roles.length; 
+}
+
+setInterval(cycleRoles, 3000);  
+
+function signin() {
+    var userName = document.getElementById('userName').value;  // Email
+    var password = document.getElementById('passWord').value;  // Password
+    var message = document.getElementById('text');
+
+    // Validation for empty fields
+    if (!userName || !password) {
+        message.textContent = "Please fill in both fields.";
+        message.style.color = "red";
+        return;
+    }
+
+    // Send credentials to Flask backend for validation
+    fetch('/signin', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username: userName, password: password })  // Send email and password
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            message.textContent = "Login successful! Redirecting...";
+            message.style.color = "green";
+
+            // Redirect to Streamlit app
+            setTimeout(function() {
+                window.location.href = "http://localhost:8501/";
+            }, 500);
+        } else {
+            // Alert message for invalid credentials
+            alert(data.message);
+            message.textContent = data.message;
+            message.style.color = "red";
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        message.textContent = "An error occurred while signing in.";
+        message.style.color = "red";
+    });
+}
+
+function t2() {
+    window.location.href = "/signup";  // Redirect to the signup page
+}
+
+
+</script>  
+</body>
+</html>

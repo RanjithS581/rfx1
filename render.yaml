@@ -1,0 +1,7 @@
+# render.yaml
+services:
+  - type: web
+    name: flask-api
+    runtime: python
+    buildCommand: ""
+    startCommand: gunicorn server:app
